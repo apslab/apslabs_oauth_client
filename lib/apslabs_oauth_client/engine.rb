@@ -1,7 +1,9 @@
 require 'omniauth'
+require 'apslabs_oauth_client/helper'
 
 module ApslabsOauthClient
   class Engine < Rails::Engine
+
     ActionController::Base.helper ApslabsOauthClient::Helper
 
     initializer "omniauth" do |app|
