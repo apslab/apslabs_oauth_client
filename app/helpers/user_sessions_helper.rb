@@ -16,5 +16,10 @@ module UserSessionsHelper
       end
     end
   end
+
+  def current_company
+    @current_company ||= current_user.current_company || current_user.companies.first
+  end
+
 end
 
