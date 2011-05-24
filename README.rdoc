@@ -1,9 +1,9 @@
-= apslabs_oauth_client
+= AP System Oauth2 client (apslabs_oauth_client)
 
-Description goes here.
+This is the client that uses ONLY omniauth to connect to a APS Labs provider for single sign on between multiple applications.
 
 == Contributing to apslabs_oauth_client
- 
+
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
 * Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it
 * Fork the project
