@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{apslabs_oauth_client}
-  s.version = "0.2.0"
+  s.version = "0.3.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Luis E. Guardiola"]
@@ -25,9 +25,9 @@ Gem::Specification.new do |s|
     "README.rdoc",
     "Rakefile",
     "VERSION",
-    "app/controllers/apslabs_oauth_client/user_sessions_controller.rb",
-    "app/helpers/apslabs_oauth_client/user_sessions_helper.rb",
-    "app/models/apslabs_oauth_client/user.rb",
+    "app/controllers/user_sessions_controller.rb",
+    "app/helpers/user_sessions_helper.rb",
+    "app/models/user.rb",
     "apslabs_oauth_client.gemspec",
     "config/initializers/omniauth.rb",
     "config/routes.rb",
