@@ -4,9 +4,10 @@ require 'apslabs_oauth_client/helper'
 module ApslabsOauthClient
   class Engine < Rails::Engine
 
+    ActionController::Base.helper ApslabsOauthClient::Helpers::InstanceMethods
+
     initializer 'ApslabsOauthClient.app_controller' do |app|
       ActiveSupport.on_load(:action_controller) do
-        extend ApslabsOauthClient::Helpers::ClassMethods
         include ApslabsOauthClient::Helpers::InstanceMethods
       end
     end
