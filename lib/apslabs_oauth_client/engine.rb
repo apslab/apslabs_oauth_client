@@ -4,7 +4,12 @@ require 'apslabs_oauth_client/helper'
 module ApslabsOauthClient
   class Engine < Rails::Engine
 
-    ActionController::Base.helper ApslabsOauthClient::Helper
+    initializer 'ApslabsOauthClient.app_controller' do |app|
+      ActiveSupport.on_load(:action_controller) do
+        extend ApslabsOauthClient::Helpers::ClassMethods
+        include ApslabsOauthClient::Helpers::InstanceMethods
+      end
+    end
 
     initializer "omniauth" do |app|
       app.middleware.use OmniAuth::Builder do
