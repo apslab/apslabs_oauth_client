@@ -1,13 +1,6 @@
 module ApslabsOauthClient
   module Helpers
 
-    module ClassMethods
-      helper_method :current_user
-      helper_method :user_signed_in?
-      helper_method :login_required
-      helper_method :current_company
-    end
-
     module InstanceMethods
       def current_user
         return nil unless session[:user_id]
