@@ -22,7 +22,7 @@ class UserSessionsController < ApplicationController
   def destroy
     session[:user_id] = nil
 
-    redirect_to(Rails.application.config.apslabs_federation_url).merge('/logout').to_s, :notice => 'You have successfully signed out!')
+    redirect_to(URI(Rails.application.config.apslabs_federation_url).merge('/logout').to_s, :notice => 'You have successfully signed out!')
   end
 end
 
